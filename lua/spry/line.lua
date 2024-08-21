@@ -5,17 +5,16 @@ M.config = {}
 M.setup = function(config)
 	M.config = vim.tbl_extend("force", M.config, config or {})
 	vim.o.tabline = '%!v:lua.require("spry.line").tabLine()'
-
 	vim.cmd([[
-  highlight clear TabLineSel
-  highlight clear TabLine
-  highlight clear TabLineFill
-  set termguicolors
-  highlight TabLineSel guibg=#e6e9ef guifg=#222222 gui=bold
-  highlight TabLine guibg=#e6e9ef guifg=#9Da0af
-  highlight TabLineFill guibg=#eff1f6 guifg=#ffffff
-  highlight TabLineSeparator guibg=#eff1f6 guifg=#eff1f6
-]])
+    highlight clear TabLineSel
+    highlight clear TabLine
+    highlight clear TabLineFill
+    set termguicolors
+    highlight TabLineSel guibg=#e6e9ef guifg=#222222 gui=bold
+    highlight TabLine guibg=#e6e9ef guifg=#9Da0af
+    highlight TabLineFill guibg=#eff1f6 guifg=#ffffff
+    highlight TabLineSeparator guibg=#eff1f6 guifg=#eff1f6
+  ]])
 end
 
 M.tabLine = function()
