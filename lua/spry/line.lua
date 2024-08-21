@@ -2,8 +2,8 @@ local M = {}
 M.config = {}
 
 M.setup = function(config)
-	M.config = vim.tbl_extend("force", M.config, config or {})
-	vim.o.tabline = '%!v:lua.require("spry.line").tabLine()'
+M.config = vim.tbl_extend("force", M.config, config or {})
+vim.o.tabline = '%!v:lua.require("spry.line").tabLine()'
 	vim.cmd([[
   highlight clear TabLineSel
   highlight clear TabLine
